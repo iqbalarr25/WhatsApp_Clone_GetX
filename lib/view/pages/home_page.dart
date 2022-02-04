@@ -24,7 +24,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 sliver: SliverSafeArea(
                   top: false,
                   sliver: SliverAppBar(
-                    
                     backgroundColor: Colors.teal[700],
                     title: const Text('WhatsApp'),
                     floating: true,
