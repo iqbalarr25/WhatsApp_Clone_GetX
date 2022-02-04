@@ -6,3 +6,5 @@ import '../widgets/widget.dart';
 import '../../models/model.dart';
 
 part 'home_page.dart';
+part 'chat_page.dart';
+part 'status_page.dart';

@@ -1,4 +1,4 @@
-part of 'widget.dart';
+part of 'page.dart';
 
 class ChatPage extends StatefulWidget {
   const ChatPage({Key? key}) : super(key: key);
@@ -44,24 +44,25 @@ class _ChatPageState extends State<ChatPage> {
                   ),
                 ),
                 Container(
+                  width: MediaQuery.of(context).size.width * 0.64,
                   margin:
                       const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
+                    children: const [
+                      Text(
                         "Fu Hua",
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 15),
-                      ),
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.65,
-                        child: const Text(
-                          "Udah makan belum? nanti kamu sakit gmna :(",
-                          style: TextStyle(color: Colors.grey, fontSize: 13),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
                           overflow: TextOverflow.ellipsis,
                         ),
+                      ),
+                      Text(
+                        "Udah makan belum? nanti kamu sakit gmna :(",
+                        style: TextStyle(color: Colors.grey, fontSize: 13),
+                        overflow: TextOverflow.ellipsis,
                       ),
                     ],
                   ),
@@ -74,10 +75,7 @@ class _ChatPageState extends State<ChatPage> {
                 children: const [
                   Text(
                     "17.43",
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 12
-                    ),
+                    style: TextStyle(color: Colors.grey, fontSize: 12),
                   )
                 ],
               ),

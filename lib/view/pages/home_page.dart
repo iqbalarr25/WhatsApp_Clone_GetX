@@ -89,7 +89,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             children: const [
               ChatPage(),
               ChatPage(),
-              ChatPage(),
+              StatusPage(),
               ChatPage(),
             ],
           ),
