@@ -13,18 +13,19 @@ class _StatusPageState extends State<StatusPage> {
     return MediaQuery.removePadding(
       context: context,
       removeTop: true,
-      child: ListView.builder(
-        itemCount: 15,
-        itemBuilder: (context, index) => _buildCardChat(),
+      child: Column(
+        children: [
+          _buildCardMyStatus(),
+        ],
       ),
     );
   }
 
-  Widget _buildCardChat() {
+  Widget _buildCardMyStatus() {
     return InkWell(
       onTap: () {},
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 13),
         height: 75,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -32,8 +33,8 @@ class _StatusPageState extends State<StatusPage> {
             Row(
               children: [
                 Container(
-                  width: 45,
-                  height: 45,
+                  width: 49,
+                  height: 49,
                   clipBehavior: Clip.hardEdge,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(250),
@@ -45,22 +46,24 @@ class _StatusPageState extends State<StatusPage> {
                 ),
                 Container(
                   margin:
-                      const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        "Fu Hua",
+                        "Status Saya",
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 15),
+                            fontWeight: FontWeight.bold, fontSize: 16),
                       ),
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.65,
-                        child: const Text(
-                          "Udah makan belum? nanti kamu sakit gmna :(",
-                          style: TextStyle(color: Colors.grey, fontSize: 13),
-                          overflow: TextOverflow.ellipsis,
+                      Flexible(
+                        child: SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.76,
+                          child: const Text(
+                            "Ketuk untuk menambahkan pembaruan status",
+                            style: TextStyle(color: Colors.grey, fontSize: 15),
+                            overflow: TextOverflow.ellipsis,
+                          ),
                         ),
                       ),
                     ],
@@ -68,19 +71,61 @@ class _StatusPageState extends State<StatusPage> {
                 ),
               ],
             ),
-            Container(
-              padding: const EdgeInsets.symmetric(vertical: 2),
-              child: Column(
-                children: const [
-                  Text(
-                    "17.43",
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 12
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildCardSeenStatus() {
+    return InkWell(
+      onTap: () {},
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 13),
+        height: 75,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              children: [
+                Container(
+                  width: 49,
+                  height: 49,
+                  clipBehavior: Clip.hardEdge,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(250),
+                    image: const DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage("assets/images/fu_hua.jpg"),
                     ),
-                  )
-                ],
-              ),
+                  ),
+                ),
+                Container(
+                  margin:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        "Status Saya",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16),
+                      ),
+                      Flexible(
+                        child: SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.76,
+                          child: const Text(
+                            "Ketuk untuk menambahkan pembaruan status",
+                            style: TextStyle(color: Colors.grey, fontSize: 15),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ],
         ),

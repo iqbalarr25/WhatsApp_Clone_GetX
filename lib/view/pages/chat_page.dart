@@ -24,7 +24,7 @@ class _ChatPageState extends State<ChatPage> {
     return InkWell(
       onTap: () {},
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 13),
         height: 75,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -32,8 +32,8 @@ class _ChatPageState extends State<ChatPage> {
             Row(
               children: [
                 Container(
-                  width: 45,
-                  height: 45,
+                  width: 49,
+                  height: 49,
                   clipBehavior: Clip.hardEdge,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(250),
@@ -46,7 +46,7 @@ class _ChatPageState extends State<ChatPage> {
                 Container(
                   width: MediaQuery.of(context).size.width * 0.64,
                   margin:
-                      const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -70,7 +70,7 @@ class _ChatPageState extends State<ChatPage> {
               ],
             ),
             Container(
-              padding: const EdgeInsets.symmetric(vertical: 2),
+              padding: const EdgeInsets.symmetric(vertical: 4),
               child: Column(
                 children: const [
                   Text(
