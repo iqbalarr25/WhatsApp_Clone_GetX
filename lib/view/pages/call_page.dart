@@ -1,13 +1,13 @@
 part of 'page.dart';
 
-class ChatPage extends StatefulWidget {
-  const ChatPage({Key? key}) : super(key: key);
+class CallPage extends StatefulWidget {
+  const CallPage({Key? key}) : super(key: key);
 
   @override
-  _ChatPageState createState() => _ChatPageState();
+  _CallPageState createState() => _CallPageState();
 }
 
-class _ChatPageState extends State<ChatPage> {
+class _CallPageState extends State<CallPage> {
   @override
   Widget build(BuildContext context) {
     return MediaQuery.removePadding(
@@ -46,12 +46,12 @@ class _ChatPageState extends State<ChatPage> {
                 Container(
                   width: MediaQuery.of(context).size.width * 0.64,
                   margin:
-                      const EdgeInsets.symmetric(horizontal: 11, vertical: 4),
+                      const EdgeInsets.symmetric(horizontal: 11, vertical: 5),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Text(
+                    children: [
+                      const Text(
                         "Fu Hua",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
@@ -59,25 +59,30 @@ class _ChatPageState extends State<ChatPage> {
                           overflow: TextOverflow.ellipsis,
                         ),
                       ),
-                      Text(
-                        "Udah makan belum? nanti kamu sakit gmna :(",
-                        style: TextStyle(color: Colors.grey, fontSize: 13),
-                        overflow: TextOverflow.ellipsis,
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.call_made,
+                            size: 15,
+                            color: Colors.teal[700],
+                          ),
+                          Text(
+                            "Hari ini 07.32",
+                            style: TextStyle(
+                              color: Colors.grey[700],
+                            ),
+                          )
+                        ],
                       ),
                     ],
                   ),
                 ),
               ],
             ),
-            Container(
-              padding: const EdgeInsets.symmetric(vertical: 4),
-              child: Column(
-                children: const [
-                  Text(
-                    "17.43",
-                    style: TextStyle(color: Colors.grey, fontSize: 12),
-                  )
-                ],
+            Center(
+              child: Icon(
+                Icons.call,
+                color: Colors.teal[700],
               ),
             ),
           ],

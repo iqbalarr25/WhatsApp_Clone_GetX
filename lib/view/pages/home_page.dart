@@ -84,10 +84,10 @@ class _HomePageState extends State<HomePage> {
         body: TabBarView(
           controller: _homePageController.tabController,
           children: const [
-            ChatPage(),
+            SizedBox(),
             ChatPage(),
             StatusPage(),
-            ChatPage(),
+            CallPage(),
           ],
         ),
       ),
